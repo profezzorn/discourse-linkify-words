@@ -87,7 +87,7 @@ const replaceCapturedVariables = function(input, match) {
   let replaced = input;
   for (let i = captured.length; i > 0; i--) {
     let re = new RegExp("\\$" + i.toString(), "");
-    replaced = replaced.replace(re, captured[i-1]);
+    replaced = replaced.replace(re, encodeURI(captured[i-1]));
   }
   return replaced;
 }
