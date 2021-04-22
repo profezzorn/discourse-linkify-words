@@ -30,7 +30,7 @@ export default {
       
       let createLink = function(text, url) {
         var link = document.createElement('a');
-        link.innerHTML = text;
+        link.textContent = text;
         link.href = url;
         link.rel = 'nofollow';
         link.target = '_blank';
