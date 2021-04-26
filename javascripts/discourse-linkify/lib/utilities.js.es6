@@ -37,7 +37,7 @@ const prepareRegex = function(input) {
     let tmp = input.split('/');
     let mtmp = tmp.pop();
     wordOrRegex = tmp.slice(1).join('/');
-    var modifier = "g";
+    let modifier = "g";
     // case insensetive
     if (mtmp.includes('i')) {
       modifier += "i";
