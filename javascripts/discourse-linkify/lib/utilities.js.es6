@@ -35,15 +35,15 @@ const prepareRegex = function(input) {
   let wordOrRegex, modifier, regex;
   if (isInputRegex(input)) {
     let tmp = input.split('/');
-    var mtmp = tmp.pop();
+    let mtmp = tmp.pop();
     wordOrRegex = tmp.slice(1).join('/');
     var modifier = "g";
     // case insensetive
-    if (tmp.includes('i')) {
+    if (mtmp.includes('i')) {
       modifier += "i";
     }
     // multiline
-    if (tmp.includes('m')) {
+    if (mtmp.includes('m')) {
       modifier += "m";
     }
   } else {
