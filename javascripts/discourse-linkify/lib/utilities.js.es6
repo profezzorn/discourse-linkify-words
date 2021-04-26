@@ -35,13 +35,16 @@ const prepareRegex = function(input) {
   let wordOrRegex, modifier, regex;
   if (isInputRegex(input)) {
     let tmp = input.split('/');
-    modifier = tmp.pop();
+    var mtmp = tmp.pop();
     wordOrRegex = tmp.slice(1).join('/');
-    // Allow only "i" modifier for now, global modifier is implicit
-    if (modifier.includes('i')) {
-      modifier = 'ig';
-    } else {
-      modifier = 'g';
+    var modifier = "g";
+    // case insensetive
+    if (tmp.includes('i')) {
+      modifier += "i"
+    }
+    // multiline
+    if (tmp.includes('m')) {
+      modifier += "m"
     }
   } else {
     // Input is a case-insensitive WORD
