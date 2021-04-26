@@ -40,11 +40,11 @@ const prepareRegex = function(input) {
     var modifier = "g";
     // case insensetive
     if (tmp.includes('i')) {
-      modifier += "i"
+      modifier += "i";
     }
     // multiline
     if (tmp.includes('m')) {
-      modifier += "m"
+      modifier += "m";
     }
   } else {
     // Input is a case-insensitive WORD
